@@ -1,8 +1,9 @@
 import com.android.builder.core.BuilderConstants
 
 apply plugin: 'com.android.library'
-apply from: '../quality/quality.gradle'
-apply from: '../maven_push.gradle'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.yuanhoujun'
 
 android {
     compileSdkVersion project.compileSdkVersion
