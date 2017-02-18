@@ -37,13 +37,10 @@ android {
 
 dependencies {
     localCompile project(path: ':dualcache-library')
-    localCompile project(path: ':dualcache-jsonserializer')
-
-    remoteCompile "com.vincentbrison.openlibraries.android:dualcache:${project.dualcacheVersion}"
-    remoteCompile "com.vincentbrison.openlibraries.android:dualcache-jsonserializer:${project.dualcacheVersion}"
 
     apt "com.jakewharton:butterknife-compiler:${project.butterknifeVersion}"
     compile "com.jakewharton:butterknife:${project.butterknifeVersion}"
+    compile "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
 }
 
 private Object[] getProguardConfigForLibraries() {
