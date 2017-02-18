@@ -6,3 +6,18 @@
 
 # Update
 集成方法，修改为使用JitPack集成，具体步骤如下：
+1) 增加以下脚本到你的工程根目录的build.gradle文件中
+<pre>
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+</pre>
+2）在你的app工程中，增加如下依赖:
+<pre>
+dependencies {
+   compile 'com.github.yuanhoujun:dualcache:v4.0.0'
+}
+</pre>
