@@ -17,5 +17,5 @@ android {
 }
 
 dependencies {
-    compile "com.jakewharton:disklrucache:${project.diskLruVersion}"
+    compile 'com.github.yuanhoujun:DiskLruCache:4.0.1'
 }
