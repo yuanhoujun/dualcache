@@ -146,6 +146,14 @@ public class AndCache {
                 } else {
                     loggerHelper.logEntryForKeyIsNotOnDisk(key);
                 }
+
+                if(null != result) {
+                    if(ramMode.equals(DualCacheRamMode.ENABLE_WITH_SPECIFIC_SERIALIZER)) {
+                        ramCacheLru.put(key , ramSerializer.toString(result));
+                    } else {
+                        ramCacheLru.put(key , result);
+                    }
+                }
             }
         } else {
             loggerHelper.logEntryForKeyIsInRam(key);
