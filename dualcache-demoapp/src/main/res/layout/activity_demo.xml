@@ -29,17 +29,6 @@
         android:text="Add object B to cache" />
 
     <Button
-        android:id="@+id/buttonAddRandomObjectToCache"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/buttonAddObjectBToCache"
-        android:text="Add random object to cache" />
-
-    <Button
         android:id="@+id/buttonDisplayObjectA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +59,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/buttonDisplayObjectB"
-        android:text="Display random object from cache" />
+        android:text="Display random object from cache"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/buttonInvalidateCache"
@@ -115,5 +105,15 @@
         android:layout_toStartOf="@id/textViewDataSizeDisk"
 
         />
+
+    <Button
+        android:id="@+id/buttonAddRandomObjectToCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add random object to cache"
+        android:layout_below="@+id/buttonAddObjectBToCache"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>
