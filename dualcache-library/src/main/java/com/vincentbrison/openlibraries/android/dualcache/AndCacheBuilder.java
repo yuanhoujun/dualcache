@@ -129,6 +129,17 @@ public class AndCacheBuilder {
     }
 
     /**
+     * 设置磁盘缓存目录，这里需要注意的是，如果使用的是自定义外部存储，6.0以上系统需要保证用户有访问外部存储的权限
+     *
+     * @param diskCacheDir 磁盘缓存目录
+     * @return the builder
+     */
+    public AndCacheBuilder diskCacheDir(File diskCacheDir) {
+        diskFolder = diskCacheDir;
+        return this;
+    }
+
+    /**
      * Whether use default disk cache folder;
      *
      * @param usePrivateFiles  is true if you want to use {@link Context#MODE_PRIVATE} with the

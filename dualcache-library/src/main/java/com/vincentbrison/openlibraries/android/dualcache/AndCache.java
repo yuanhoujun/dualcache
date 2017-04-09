@@ -301,4 +301,13 @@ public class AndCache {
     public int maxRamCacheSize() {
         return ramCacheLru.maxSize();
     }
+
+    /**
+     * 获取磁盘缓存目录
+     *
+     * @return 磁盘缓存目录File对象
+     */
+    public File diskCacheDir() {
+        return diskCacheFolder;
+    }
 }
